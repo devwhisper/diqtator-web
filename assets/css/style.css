@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@font-face {
+  font-family: "Avant Garde";
+  src: url("../fonts/Avant Garde.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avant Garde";
+  src: url("../fonts/Avant Garde Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #b7ab98;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Avant Garde", sans-serif;
+}
+
+h1 {
+  font-size: 8.75rem;
+}
+
+h2 {
+  font-size: 5.5rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 2.25rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 2rem 0;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.navbar .container {
+  width: 90%;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper .logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.navbar .nav-menu {
+  list-style-type: none;
+}
+
+.navbar .nav-menu .nav-item a {
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+.navbar .nav-menu .nav-item a .mask {
+  position: relative;
+  padding: 0;
+  height: 1rem;
+  overflow: hidden;
+}
+
+.navbar .nav-menu .nav-item a .nav-link-inner {
+  transition: transform 0.35s ease;
+}
+
+.navbar .nav-menu .nav-item a .nav-link-inner .nav-link-text {
+  display: block;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.navbar .nav-menu .nav-item a .nav-link-inner .nav-link-text.deep {
+  color: hsla(37, 18%, 66%, 0.5);
+}
+
+.navbar .nav-menu .nav-item a .nav-link-inner .nav-link-text.active {
+  color: #b7ab98;
+}
+
+.navbar .nav-menu .nav-item.active a .nav-link-inner .nav-link-text.deep {
+  color: #b7ab98;
+}
+
+.navbar .nav-menu .nav-item a:hover .nav-link-inner,
+.navbar .nav-menu .nav-item.active a .nav-link-inner {
+  transform: translateY(-1rem);
+}
+
+/* hero */
+
+.hero {
+  text-align: center;
+  color: #b7ab98;
+  background-image: linear-gradient(0deg, #4d4855 0%, #000000 74%);
+  background-attachment: fixed;
+  padding: 8rem 0 4rem;
+}
+
+.subheading {
+  letter-spacing: 0.5em;
+  margin-bottom: 1.875rem;
+  text-transform: uppercase;
+}
+
+.hero-content .hero-title {
+  line-height: 7.8rem;
+  letter-spacing: -0.2rem;
+  text-transform: uppercase;
+}
+
+.hero-content .hero-title .hero-text {
+  display: block;
+}
+
+.hero-content .hero-title .hero-text.primary {
+  color: #eb5939;
+}
+
+section {
+  padding: 8rem 0;
+}
+
+/* about */
+
+.about .about-text {
+  font-family: "Avant Garde", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: -0.2rem;
+  font-weight: bold;
+}
+
+.about-text .highlight {
+  color: #eb5939;
+}
+
+/* portfoliio */
+
+.portfolio-item {
+  position: relative;
+  width: 25rem;
+  height: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-item .portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-item .portfolio-overlay {
+  position: absolute;
+  background: rgba(13, 13, 13, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-item .portfolio-overlay .portfolio-title {
+  font-weight: normal;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay .portfolio-title {
+  transform: translateY(0);
+}
+
+/* contact */
+
+.qontact {
+  background-image: linear-gradient(0deg, #4d4855 0%, #000000 74%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.qontact .subheading {
+  text-align: center;
+}
+
+:focus {
+  outline: none;
+}
+
+.form-group {
+  width: 100%;
+  margin: 4rem 0;
+  position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font: 2.25rem "Plus Jakarta Sans", sans-serif;
+  width: 100%;
+  color: #b7ab98;
+  box-sizing: border-box;
+}
+
+.form-input {
+  border: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid hsla(37, 18%, 66%, 0.5);
+  background-color: transparent;
+  position: relative;
+}
+
+.form-input ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #b7ab98;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.form-input:focus ~ .focus-border,
+.has-content.form-input ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+
+.form-input ~ label {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: hsla(37, 18%, 66%, 0.5);
+  transition: 0.3s;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.25rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.form-input:focus ~ label,
+.has-content.form-input ~ label {
+  top: -16px;
+  font-size: 1rem;
+  color: #b7ab98;
+  transition: 0.3s;
+}
+
+.btn {
+  font-size: 2.25rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #b7ab98;
+  color: #000000;
+  border: 2px solid #b7ab98;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn.disabled {
+  background-color: transparent;
+  color: hsla(37, 18%, 66%, 0.5);
+  border-color: hsla(37, 18%, 66%, 0.5);
+  cursor: not-allowed;
+}
+
+/* connect */
+
+.connect-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.custom-list-item {
+  font-family: "Avant Garde", sans-serif;
+  font-size: 2.25rem;
+  letter-spacing: -0.1rem;
+  font-weight: bold;
+  color: #b7ab98;
+  display: flex;
+  align-items: center;
+}
+
+.custom-list-item::before {
+  content: "►";
+  color: #ff5733;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  line-height: 0;
+}
+
+.custom-list-item a {
+  text-decoration: none;
+  width: 100%;
+  color: inherit;
+  transition: 0.4s;
+  position: relative;
+}
+
+.custom-list-item a:hover {
+  color: #0d0d0d;
+}
+
+.custom-list-item a .hover-background {
+  position: absolute;
+  background-color: #ff5733;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  z-index: -1;
+  transition: transform 0.4s;
+}
+
+.custom-list-item a:hover .hover-background {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.contact-item {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.contact-item .contact-title {
+  font-weight: bold;
+}
+
+.contact-item .contact-detail {
+  font-size: 0.875rem;
+  color: hsla(37, 18%, 66%, 0.5);
+}
+
+/* footer */
+
+.site-footer {
+  padding: 0rem 0 4rem;
+}
+
+.site-footer .copyright {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.875rem;
+  color: hsla(37, 18%, 66%, 0.5);
+  text-align: center;
+}
+
+.site-footer .copyright .designer-name {
+  font-family: "Avant Garde", sans-serif;
+  text-transform: uppercase;
+  color: #eb5939;
+  letter-spacing: 0.2em;
+  margin: 0.2em;
+}
